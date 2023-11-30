@@ -36,3 +36,8 @@ function deleteTodoHandler(e){
 function dragstartHandler(e){
   e.dataTransfer.setData('elemId', e.target.id);
 }
+function dropHandler(e){
+  let targetId = e.dataTransfer.getData('elemId')
+    let targetElem = document.getElementById(targetId)
+  e.target.append(targetElem)
+ }

@@ -45,6 +45,27 @@ function dropHandler(e){
   e.preventDefault();
 }
 
+// Modal
+function OpenModal() {
+  Overlay.style.display = "flex";
+  modal.style.display = "flex";
+}
+function CloseModal() {
+  Overlay.style.display = "none";
+  modal.style.display = "none";
+}
+ModalBtns.forEach((ModalBtn) => {
+  ModalBtn.addEventListener("click", OpenModal);
+});
+Overlay.addEventListener("click", CloseModal);
+CloseBtn.addEventListener("click", CloseModal);
+$.body.addEventListener("keydown", (event) => {
+  if (event.keyCode === 27) {
+    Overlay.style.display = "none";
+    modal.style.display = "none";
+  }
+});
+
 // Event Listeners
 AddNewTaskBtn.addEventListener('click' , addTodo);
 ListItems.forEach((ListItem) => {

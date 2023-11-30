@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدیریت کارها</title>
+    <link rel="stylesheet" href="./Css/index.css" />
+    <link rel="icon" href="./Assets/Images/logo.svg" type="image/svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <section class="overlay"></section>
+        <!-- Modal -->
+        <section id="modal">
+         <div class="modalContent">
+           <div class="close">
+             <button class="CloseBtn">
+               <svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 fill="currentColor"
+               >
+                 <path
+                   fill-rule="evenodd"
+                   d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                   clip-rule="evenodd"
+                 />
+               </svg>
+             </button>
+           </div>
+           <p>
+            <i class="fas fa-plus" aria-hidden="true"></i>
+            افزودن کار جدید</p>
+            <input class="AddNewTaskInput" type="text" placeholder="عنوان کار جدید را وارد نمایید" />
+            <button class="AddNewTaskBtn">افزودن کار جدید</button>
+         </div>
+        </section>
+    <header class="masthead">
+
+      <div class="boards-menu">
+    
+        <button class="boards-btn btn"><i class="fab fa-trello boards-btn-icon"></i>برند‌ها</button>
+    
+        <div class="board-search">
+          <i class="fas fa-search search-icon" aria-hidden="true"></i>
+          <input type="search" class="board-search-input" aria-label="Board Search">
+          
+        </div>
+    
+      </div>
+    
+      <div class="logo">
+    
+       <img src="./Assets/Images/logo.svg"/>
+       <span>Ghorbani.Dev</span>
+    
+      </div>
+    
+      <div class="user-settings">
+    
+        <button class="user-settings-btn btn" aria-label="Create">
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        </button>
+    
+        <button class="user-settings-btn btn" aria-label="Information">
+          <i class="fas fa-info-circle" aria-hidden="true"></i>
+        </button>
+    
+        <button class="user-settings-btn btn" aria-label="Notifications">
+          <i class="fas fa-bell" aria-hidden="true"></i>
+        </button>
+    
+        <button class="user-settings-btn btn" aria-label="User Settings">
+          <i class="fas fa-user-circle" aria-hidden="true"></i>
+        </button>
+    
+      </div>
+    
+    </header>
+    <!-- End of masthead -->
+    
+    
+    <!-- Board info bar -->
+    <section class="board-info-bar">
+    
+      <div class="board-controls">
+    
+        <button class="board-title btn">
+          <h2>مدیریت کارها</h2>
+        </button>
+    
+        <button class="star-btn btn" aria-label="Star Board">
+          <i class="far fa-star" aria-hidden="true"></i>
+        </button>
+    
+        <button class="personal-btn btn">عمومی</button>
+    
+        <button class="private-btn btn"><i class="fas fa-briefcase private-btn-icon" aria-hidden="true"></i>خصوصی</button>
+    
+      </div>
+    
+      <button class="menu-btn btn">مشاهده منو<i class="fas fa-ellipsis-h menu-btn-icon" aria-hidden="true"></i></button>
+    
+    </section>
+    <!-- End of board info bar -->
+    
+    <!-- Lists container -->
+    <section class="lists-container">
+    
+      <div class="list">
+    
+        <h3 class="list-title">لیست کارها</h3>
+    
+        <ul class="list-items" id="AddNewTodoWrapper">
+        </ul>
+    
+        <button class="add-card-btn btn ModalBtn">افزودن کار..</button>
+    
+      </div>
+      <div class="list">
+    
+        <h3 class="list-title">  انجام نشده </h3>
+    
+        <ul class="list-items">
+          
+        </ul>
+    
+        <button class="add-card-btn btn ModalBtn">افزودن کار..</button>
+    
+      </div>
+
+
+      <div class="list">
+    
+        <h3 class="list-title">در حال انجام </h3>
+    
+        <ul class="list-items">
+        
+        </ul>
+    
+        <button class="add-card-btn btn ModalBtn">افزودن کار..</button>
+    
+      </div>
+    
+      <div class="list">
+    
+        <h3 class="list-title">انجام شده </h3>
+    
+        <ul class="list-items">
+       
+        </ul>
+    
+        <button class="add-card-btn btn ModalBtn">افزودن کار..</button>
+    
+      </div>
+    
+    </section>
+    <!-- End of lists container -->
+
+    <script src="./JS/Main.js"></script>
+  </body>
+</html>

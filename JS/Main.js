@@ -41,3 +41,6 @@ function dropHandler(e){
     let targetElem = document.getElementById(targetId)
   e.target.append(targetElem)
  }
+ function dragoverHandler(e){
+  e.preventDefault();
+}

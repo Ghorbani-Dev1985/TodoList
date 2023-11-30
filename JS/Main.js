@@ -44,3 +44,13 @@ function dropHandler(e){
  function dragoverHandler(e){
   e.preventDefault();
 }
+
+// Event Listeners
+AddNewTaskBtn.addEventListener('click' , addTodo);
+ListItems.forEach((ListItem) => {
+  ListItem.addEventListener('dragover' , dragoverHandler);
+});
+
+ListItems.forEach((ListItem) => {
+  ListItem.addEventListener('drop' , dropHandler);
+});

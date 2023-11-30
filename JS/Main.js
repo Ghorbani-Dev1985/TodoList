@@ -33,3 +33,6 @@ function addTodo(){
 function deleteTodoHandler(e){
   e.target.parentElement.remove();
 }
+function dragstartHandler(e){
+  e.dataTransfer.setData('elemId', e.target.id);
+}

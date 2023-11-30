@@ -30,3 +30,6 @@ function addTodo(){
   AddNewTaskInput.value = "";
   setId++;
 }
+function deleteTodoHandler(e){
+  e.target.parentElement.remove();
+}
